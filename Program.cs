@@ -11,19 +11,19 @@ namespace CarzCo
     {
         static void Main(string[] args)
         {
-            Car car = new Car("Volvo", "XC", 2004, 3425);
+            Car acar = new Car("Volvo", "XC", 2004, 3425);
             Motorbike motorbike = new Motorbike("Harley", "MN", 1996, 8393);
             Bicycle bicycle = new Bicycle("Kseniias", "NM", 2006, 3930, 4);
 
+            VechileRegister KseniiasCarRegister = new VechileRegister();
+            acar.Drive();
+            acar.ThisVechil();
 
-            car.Drive();
-            car.ThisVechile();
 
-            motorbike.Drive();
-            motorbike.ThisVechile();
 
-            bicycle.Drive();
-            bicycle.ThisVechile();
+            KseniiasCarRegister.AddListVechil(acar);
+            string input = Console.ReadLine();
+            KseniiasCarRegister.SearchListVechil(input);
         }
 
     }
